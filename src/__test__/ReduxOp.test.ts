@@ -150,7 +150,7 @@ test('ReduxOP should accept null reducer type', () => {
 });
 
 test('Test', () => {
-	let obj = {
+	const obj = {
 		a: 1,
 		b: {
 			c: 2,
@@ -165,7 +165,7 @@ test('Test', () => {
 	};
 	const res: any[] = [];
 	function doFlat(obj: any, path: string) {
-		for (let key in obj) {
+		for (const key in obj) {
 			if (typeof obj[key] === 'object') {
 				doFlat(obj[key], `${path}${path && '.'}${key}`);
 			} else {
