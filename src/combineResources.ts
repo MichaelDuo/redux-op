@@ -31,3 +31,9 @@ export class CombinedOPs<S> {
 
 export default <S>(opsMap: OPMapObject<S>): CombinedOPs<S> =>
 	new CombinedOPs(opsMap);
+
+/**
+ * store = useStore()
+ * store.count.increment()
+ * store.select((state)=>state.count)
+ */
